@@ -1,4 +1,4 @@
-package com.heima.config;
+package com.heima.handler;
 
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;

@@ -1,4 +1,4 @@
-package com.heima.config;
+package com.heima.handler;
 
 import com.heima.response.common.BaseResponse;
 import com.heima.response.common.ResultEnum;

@@ -1,4 +1,4 @@
-package com.heima.config;
+package com.heima.handler;
 
 import com.heima.slave.user.UserMapperReaderDao;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

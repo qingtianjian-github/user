@@ -1,8 +1,6 @@
-package com.heima.config;
+package com.heima.handler;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * 自动配置类

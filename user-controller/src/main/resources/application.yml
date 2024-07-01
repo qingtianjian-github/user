@@ -6,4 +6,5 @@ server:
 spring:
   application:
     name: user-controller
-
+  profiles:
+    active: -test

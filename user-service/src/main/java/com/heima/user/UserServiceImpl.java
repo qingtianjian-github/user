@@ -1,16 +1,16 @@
 package com.heima.user;
 
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
-import com.heima.config.TargetDataSource;
+import com.heima.handler.TargetDataSource;
 import com.heima.po.user.UserPo;
 import com.heima.response.common.BaseResponse;
 import com.heima.response.common.ResultEnum;
 import com.heima.response.user.UserResponse;
 import com.heima.slave.user.UserMapperReaderDao;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
  *
  * @author cjw
  */
-@Service
+@DubboService
 @Slf4j
 public class UserServiceImpl implements UserService {
 
