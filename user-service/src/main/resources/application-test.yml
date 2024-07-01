@@ -1,0 +1,16 @@
+dubbo:
+  registry:
+    address: nacos://localhost:2181 # 注册中心
+    timeout: 5000 # 配置超时时间，默认为1000ms
+  protocol:
+    name: dubbo
+    port: 20882
+  provider:
+    retries: 3 # 配置重试次数
+    timeout: 59000 # 超时时间
+    register: true # 是否注册：true注册
+  scan:
+    base-packages: com.heima.service # 扫描dubbo生产者所在的包
+  consumer: # 消费者配置
+    check: false # 是否校验提供者服务
+    timeout: 5000 # 超时时间

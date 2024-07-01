@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heima.slave.user.UserMapperReader">
+
+    <resultMap id="query_user_map" type="com.heima.po.user.UserPo">
+        <result column="id" property="id"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_phone" property="userPhone"/>
+        <result column="user_email" property="userEmail"/>
+        <result column="user_password" property="userPassword"/>
+        <result column="user_gender" property="userGender"/>
+        <result column="creation_date" property="creationDate"/>
+        <result column="last_modify_date" property="lastModifyDate"/>
+    </resultMap>
+
+    <sql id="query_user_field">
+        id,user_name,user_phone,user_email,user_password,user_gender,creation_date,last_modify_date
+    </sql>
+
+    <select id="queryUserList" resultType="com.heima.po.user.UserPo">
+        select
+        <include refid="query_user_field"/>
+        from user
+    </select>
+</mapper>

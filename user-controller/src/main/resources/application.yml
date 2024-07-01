@@ -1,0 +1,9 @@
+server:
+  port: 8101
+  servlet:
+    context-path: /user
+
+spring:
+  application:
+    name: user-controller
+
