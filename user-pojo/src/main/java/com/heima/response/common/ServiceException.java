@@ -1,6 +1,10 @@
 package com.heima.response.common;
 
+/**
+ * 自定义异常类
+ */
 public class ServiceException extends RuntimeException {
+    private static final long serialVersionUID = 6364366315301499929L;
 
     private final ResultEnum code;
 

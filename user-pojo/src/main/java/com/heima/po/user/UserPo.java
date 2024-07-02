@@ -1,9 +1,11 @@
 package com.heima.po.user;
 
+import com.heima.response.common.SysRole;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 用户实体类
@@ -45,6 +47,11 @@ public class UserPo implements Serializable {
     private Integer userGender;
 
     /**
+     * 部门id
+     */
+    private long deptId;
+
+    /**
      * 创建时间
      */
     private Date creationDate;
@@ -53,4 +60,9 @@ public class UserPo implements Serializable {
      * 最后修改时间
      */
     private Date lastModifyDate;
+
+    /**
+     * 校色
+     */
+    private List<SysRole> roles;
 }
