@@ -26,17 +26,23 @@ public class JwtUtils implements Serializable {
     /**
      * 过期时间：7天，s为单位
      */
-    private static long expire = 604800;
+    private long expire = 604800;
 
     /**
      * 安全认证
      */
-    private static String secret = "abcdefghabcdefghabcdefghabcdefgh";
+    private String secret = "abcdefghabcdefghabcdefghabcdefgh";
 
     /**
      * 请求头信息
      */
-    private static String header = "Authorization";
+    private String header = "Authorization";
+
+    public JwtUtils() {
+        this.expire = 604800;
+        this.secret = "abcdefghabcdefghabcdefghabcdefgh";
+        this.header = "Authorization";
+    }
 
     /**
      * 生成jwt
