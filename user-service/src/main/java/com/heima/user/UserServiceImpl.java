@@ -1,7 +1,7 @@
 package com.heima.user;
 
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
-import com.heima.handler.TargetDataSource;
+import com.heima.config.TargetDataSource;
 import com.heima.po.user.UserPo;
 import com.heima.response.common.BaseResponse;
 import com.heima.response.common.ResultEnum;

@@ -1,4 +1,4 @@
-package com.heima.handler;
+package com.heima.config;
 
 import java.util.ArrayList;
 import java.util.List;

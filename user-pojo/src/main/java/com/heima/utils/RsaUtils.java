@@ -1,11 +1,7 @@
 package com.heima.utils;
 
-import com.alibaba.nacos.common.codec.Base64;
-
-import javax.crypto.BadPaddingException;
+import org.apache.commons.codec.binary.Base64;
 import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import java.io.Serializable;
 import java.security.KeyFactory;
 import java.security.PrivateKey;
 import java.security.spec.PKCS8EncodedKeySpec;

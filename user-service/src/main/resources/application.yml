@@ -1,8 +1,82 @@
 server:
   port: 8102
 
+#spring:
+#  application:
+#    name: user-service
+#  profiles:
+#    active: -test,-test-jdbc
+
+dubbo:
+  registry:
+    # id:
+    address: nacos://192.168.221.139/:8848 # 注册中心
+    timeout: 50000 # 配置超时时间，默认为1000ms
+  protocol:
+    name: dubbo
+    port: 20882
+  provider:
+    retries: 3 # 配置重试次数
+    timeout: 50000 # 超时时间
+    register: true # 是否注册：true注册
+  scan:
+    base-packages: com.heima # 扫描dubbo生产者所在的包
+  consumer: # 消费者配置
+    check: false # 是否校验提供者服务
+    timeout: 50000 # 超时时间
+
 spring:
+  liveBeansView:
+    mbeanDomain: my-custom-domain
   application:
     name: user-service
-  profiles:
-    active: -test,-test-jdbc
+  datasource:
+    userdb:
+      master:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.221.139:3306/userdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+        username: root
+        password: Meimei7758.
+        # 初始连接数
+        initialSize: 5
+        # 最小连接池数量
+        minIdle: 10
+        # 最大连接池数量
+        maxActive: 20
+        # 配置获取连接等待超时的时间
+        maxWait: 60000
+        # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        timeBetweenEvictionRunsMillis: 60000
+        # 配置一个连接在池中最小生存的时间，单位是毫秒
+        minEvictableIdleTimeMillis: 300000
+        # 配置一个连接在池中最大生存的时间，单位是毫秒
+        maxEvictableIdleTimeMillis: 900000
+        # 配置检测连接是否有效
+        validationQuery: SELECT 1 FROM DUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+      slave:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.221.139:3306/userdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+        username: root
+        password: Meimei7758.
+        # 初始连接数
+        initialSize: 5
+        # 最小连接池数量
+        minIdle: 10
+        # 最大连接池数量
+        maxActive: 20
+        # 配置获取连接等待超时的时间
+        maxWait: 60000
+        # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+        timeBetweenEvictionRunsMillis: 60000
+        # 配置一个连接在池中最小生存的时间，单位是毫秒
+        minEvictableIdleTimeMillis: 300000
+        # 配置一个连接在池中最大生存的时间，单位是毫秒
+        maxEvictableIdleTimeMillis: 900000
+        # 配置检测连接是否有效
+        validationQuery: SELECT 1 FROM DUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false

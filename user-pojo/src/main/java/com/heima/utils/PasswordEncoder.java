@@ -1,12 +1,9 @@
 package com.heima.utils;
 
 import lombok.NoArgsConstructor;
-import org.springframework.cloud.bootstrap.encrypt.RsaProperties;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
-import java.security.PrivateKey;
 
 /**
  * 密码加密解密
