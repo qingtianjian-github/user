@@ -2,12 +2,12 @@ package com.heima.user;
 
 import com.heima.po.user.UserPo;
 import com.heima.response.common.AccountUser;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author cjw
  */
-@Service
+@DubboService
 public class UserDetailServiceImpl implements UserDetailsService, UserDetailService {
 
     @Autowired

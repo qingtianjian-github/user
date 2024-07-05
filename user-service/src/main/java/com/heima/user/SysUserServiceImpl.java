@@ -1,14 +1,14 @@
 package com.heima.user;
 
 import com.heima.po.user.UserPo;
-import org.springframework.stereotype.Service;
+import org.apache.dubbo.config.annotation.DubboService;
 
 /**
  * 同步用户服务
  *
  * @author cjw
  */
-@Service
+@DubboService
 public class SysUserServiceImpl implements SysUserService {
 
     /**
