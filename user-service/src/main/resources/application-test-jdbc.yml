@@ -3,7 +3,7 @@ spring:
     userdb:
       master:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/master?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+        url: jdbc:mysql://192.168.221.139:3306/userdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
         username: root
         password: root
         # 初始连接数
@@ -27,7 +27,7 @@ spring:
         testOnReturn: false
       slave:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/master?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+        url: jdbc:mysql://192.168.221.139:3306/userdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
         username: root
         password: root
         # 初始连接数

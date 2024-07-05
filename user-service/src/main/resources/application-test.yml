@@ -1,6 +1,6 @@
 dubbo:
   registry:
-    address: nacos://localhost:2181 # 注册中心
+    address: nacos://192.168.221.139/:2181 # 注册中心
     timeout: 5000 # 配置超时时间，默认为1000ms
   protocol:
     name: dubbo
@@ -14,3 +14,7 @@ dubbo:
   consumer: # 消费者配置
     check: false # 是否校验提供者服务
     timeout: 5000 # 超时时间
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
