@@ -7,27 +7,7 @@ server:
 #  profiles:
 #    active: -test,-test-jdbc
 
-dubbo:
-  registry:
-    # id:
-    address: nacos://192.168.221.139/:8848 # 注册中心
-    timeout: 50000 # 配置超时时间，默认为1000ms
-  protocol:
-    name: dubbo
-    port: 20882
-  provider:
-    retries: 3 # 配置重试次数
-    timeout: 50000 # 超时时间
-    register: true # 是否注册：true注册
-  scan:
-    base-packages: com.heima # 扫描dubbo生产者所在的包
-  consumer: # 消费者配置
-    check: false # 是否校验提供者服务
-    timeout: 50000 # 超时时间
-
 spring:
-  liveBeansView:
-    mbeanDomain: my-custom-domain
   application:
     name: user-service
   datasource:
@@ -80,3 +60,22 @@ spring:
         testWhileIdle: true
         testOnBorrow: false
         testOnReturn: false
+
+dubbo:
+  registry:
+    # id:
+    address: nacos://192.168.221.139/:8848 # 注册中心
+    timeout: 50000 # 配置超时时间，默认为1000ms
+  protocol:
+    name: dubbo
+    port: 20882
+    host: 192.168.56.88
+  provider:
+    retries: 3 # 配置重试次数
+    timeout: 50000 # 超时时间
+    register: true # 是否注册：true注册
+  scan:
+    base-packages: com.heima # 扫描dubbo生产者所在的包
+  consumer: # 消费者配置
+    check: false # 是否校验提供者服务
+    timeout: 50000 # 超时时间
